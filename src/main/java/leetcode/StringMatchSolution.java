@@ -74,7 +74,6 @@ class StringMatchSolution {
     }
 
 
-
     public boolean kmp(List<Integer> sOrder, List<Integer> tOrder) {
         int sLen = sOrder.size();
         int tLen = tOrder.size();
