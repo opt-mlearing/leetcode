@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+
 /**
  * 合并二叉树
  * https://leetcode-cn.com/problems/merge-two-binary-trees/
@@ -23,7 +25,7 @@ public class Solution617 {
         return node;
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
