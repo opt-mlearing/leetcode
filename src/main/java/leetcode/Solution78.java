@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+/**
+ * 子集.
+ * https://leetcode-cn.com/problems/subsets/
+ */
 public class Solution78 {
 
     private List<List<Integer>> result;
