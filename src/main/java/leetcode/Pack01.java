@@ -9,12 +9,25 @@ package leetcode;
  */
 public class Pack01 {
 
-    /*public static void main(String[] args) {
-        Pack01 pack01 = new Pack01();
+    public void testFunction(String[] args) {
         int[] w = {2, 5, 4, 2, 3};
         int[] v = {6, 3, 5, 4, 6};
-        int pack = pack01.pack(w, v, 10, 5);
-    }*/
+        int pack1 = this.pack1(w, v, 10, 5);
+        int pack2 = this.pack2(w, v, 10, 5);
+        assert pack1 == pack2;
+    }
+
+    // dp[i] 表示放入物品i的最大价值.
+    public int pack2(int[] w, int[] v, int W, int n) {
+        int[] dp = new int[W + 1];
+        for (int i = 1; i <= n; ++i) {
+            for (int j = W; j >= w[i - 1]; --j) {
+                // j-> w[i- 1] 越忘0逼近，那么价值就越小.
+                dp[j] = Math.max(dp[j], dp[j - w[i - 1]] + v[i - 1]);
+            }
+        }
+        return dp[W];
+    }
 
     /**
      * @param w 重量
@@ -23,7 +36,7 @@ public class Pack01 {
      * @param n n个物品
      * @return
      */
-    public int pack(int[] w, int[] v, int W, int n) {
+    public int pack1(int[] w, int[] v, int W, int n) {
         int[][] dp = new int[n + 1][W + 1];
         dp[0][0] = 0;
         for (int i = 1; i <= n; ++i) {
