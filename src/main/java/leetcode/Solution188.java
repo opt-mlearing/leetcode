@@ -7,8 +7,8 @@ package leetcode;
 public class Solution188 {
 
     public int maxProfit(int k, int[] prices) {
-        // dp[i][0][j] 表示在第i天，没有购入股票，交易j次的 最大利润.
-        // dp[i][1][j] 表示在第i天，购入股票，交易j次的 最大利润.
+        // dp[i][0][j] 表示在第i天，未持有股票，交易j次的 最大利润.
+        // dp[i][1][j] 表示在第i天，已持有股票，交易j次的 最大利润.
         // 其中 买入&& 卖出 算一个完整的交易，当买入的时候交易次数加1.
         int size = prices.length;
         if (size < 2) {
@@ -21,6 +21,8 @@ public class Solution188 {
             dp[0][0][i] = 0;
             dp[0][1][i] = -prices[0];
         }
+        // 特例，标注下
+        dp[0][1][0]= 0;
         for (int i = 1; i < size; ++i) {
             for (int j = 1; j <= kk; ++j) {
                 dp[i][0][j] = Math.max(dp[i - 1][0][j], dp[i - 1][1][j] + prices[i]);
