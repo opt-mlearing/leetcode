@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -68,34 +67,35 @@ class StringMatchSolution {
 
     public static void main(String[] args) {
         StringMatchSolution matchSolution = new StringMatchSolution();
-        List<Integer> sOrder = Arrays.asList(2, 2, 3, 2, 2, 2, 3, 2, 5);
-        List<Integer> tOrder = Arrays.asList(2, 2, 2, 2, 2, 2, 3, 2, 2, 5);
+        List<Integer> sOrder = Arrays.asList(2, 2, 3, 2, 2, 3);
+        List<Integer> tOrder = Arrays.asList(2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 5);
         boolean kmp = matchSolution.kmp(sOrder, tOrder);
+        assert kmp == true;
     }
 
 
     public boolean kmp(List<Integer> sOrder, List<Integer> tOrder) {
         int sLen = sOrder.size();
         int tLen = tOrder.size();
-        int[] fail = new int[tOrder.size()];
+        int[] fail = new int[sOrder.size()];
         Arrays.fill(fail, -1);
-        for (int i = 1, j = -1; i < tLen; ++i) {
-            while (j != -1 && !(tOrder.get(i).equals(tOrder.get(j + 1)))) {
+        for (int i = 1, j = -1; i < sLen; ++i) {
+            while (j != -1 && !sOrder.get(i).equals(sOrder.get(j + 1))) {
                 j = fail[j];
             }
-            if (tOrder.get(i).equals(tOrder.get(j + 1))) {
+            if (sOrder.get(i).equals(sOrder.get(j + 1))) {
                 ++j;
             }
             fail[i] = j;
         }
-        for (int i = 0, j = -1; i < sLen; ++i) {
-            while (j != -1 && !(sOrder.get(i).equals(tOrder.get(j + 1)))) {
+        for (int i = 0, j = -1; j < tLen; ++i) {
+            while (j != -1 && !tOrder.get(i).equals(sOrder.get(j + 1))) {
                 j = fail[j];
             }
-            if (sOrder.get(i).equals(tOrder.get(j + 1))) {
+            if (tOrder.get(i).equals(sOrder.get(j + 1))) {
                 ++j;
             }
-            if (j == tLen - 1) {
+            if (j == sLen - 1) {
                 return true;
             }
         }
