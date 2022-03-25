@@ -102,5 +102,4 @@ class StringMatchSolution {
         return false;
     }
 
-
 }
