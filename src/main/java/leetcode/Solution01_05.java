@@ -1,5 +1,9 @@
 package leetcode;
 
+/**
+ * 面试题 01.05. 一次编辑
+ * https://leetcode-cn.com/problems/one-away-lcci/
+ */
 public class Solution01_05 {
 
     public boolean oneEditAway(String first, String second) {
