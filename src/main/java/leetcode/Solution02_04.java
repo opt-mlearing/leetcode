@@ -27,7 +27,7 @@ public class Solution02_04 {
         return smallDummy.next;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

@@ -16,7 +16,7 @@ public class Solution02_07 {
         return a;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

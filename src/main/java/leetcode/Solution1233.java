@@ -26,7 +26,7 @@ public class Solution1233 {
         return res;
     }
 
-    public static class Trie {
+    private static class Trie {
 
         private Map<String, Trie> children;
         private boolean isEnd;

@@ -78,7 +78,7 @@ public class Solution530 {
         innerSearch(node.right, container);
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

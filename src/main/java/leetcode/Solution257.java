@@ -39,7 +39,7 @@ public class Solution257 {
         return buffer.toString();
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

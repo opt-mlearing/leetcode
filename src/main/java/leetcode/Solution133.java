@@ -51,7 +51,7 @@ public class Solution133 {
         return clone;
     }
 
-    class Node {
+    private static class Node {
 
         public int val;
         public List<Node> neighbors;

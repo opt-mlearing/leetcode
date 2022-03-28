@@ -31,7 +31,7 @@ public class Solution538 {
         preOrder(root.right, values);
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

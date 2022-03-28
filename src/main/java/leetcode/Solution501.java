@@ -53,7 +53,7 @@ public class Solution501 {
         globalCount = Math.max(globalCount, curCount);
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

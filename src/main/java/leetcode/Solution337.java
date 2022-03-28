@@ -29,7 +29,7 @@ public class Solution337 {
                 + Math.max(select.getOrDefault(root.right, 0), abandon.getOrDefault(root.right, 0)));
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

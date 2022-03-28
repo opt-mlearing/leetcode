@@ -35,7 +35,7 @@ public class Solution783 {
         preSearch(root.right, container);
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

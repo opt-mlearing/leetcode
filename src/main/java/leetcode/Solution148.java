@@ -68,7 +68,7 @@ public class Solution148 {
         return fakeNode.next;
     }
 
-    static public class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

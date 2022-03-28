@@ -29,7 +29,7 @@ public class Solution671 {
         dfs(root.right);
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

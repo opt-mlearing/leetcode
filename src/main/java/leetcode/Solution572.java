@@ -16,7 +16,6 @@ public class Solution572 {
 
 
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
-
         getMaxTreeNodeVal(root);
         getMaxTreeNodeVal(subRoot);
         leftLeaf = maxElement + 1;
@@ -98,7 +97,7 @@ public class Solution572 {
         return dfs(root.left, subRoot.left) && dfs(root.right, subRoot.right);
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

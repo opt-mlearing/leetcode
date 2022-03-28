@@ -36,7 +36,7 @@ public class Solution02_02 {
         return head.val;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

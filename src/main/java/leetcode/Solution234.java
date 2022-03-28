@@ -43,7 +43,7 @@ public class Solution234 {
         return slow;
     }
 
-    public class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

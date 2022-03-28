@@ -28,7 +28,7 @@ public class Solution606 {
         buffer.append(")");
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

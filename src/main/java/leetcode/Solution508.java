@@ -46,7 +46,7 @@ public class Solution508 {
         return tmpSum;
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

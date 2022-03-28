@@ -17,7 +17,7 @@ public class Solution02_03 {
         pre.next = null;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

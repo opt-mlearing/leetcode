@@ -33,7 +33,7 @@ public class Solution116 {
         return root;
     }
 
-    static class Node {
+    private static class Node {
         public int val;
         public Node left;
         public Node right;

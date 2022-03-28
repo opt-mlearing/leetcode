@@ -61,7 +61,7 @@ public class Solution662 {
         return width;
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

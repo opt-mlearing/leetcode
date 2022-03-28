@@ -1,5 +1,9 @@
 package leetcode;
 
+/**
+ * 子数组范围和
+ * https://leetcode-cn.com/problems/sum-of-subarray-ranges/
+ */
 public class Solution2104 {
 
     public long subArrayRanges(int[] nums) {

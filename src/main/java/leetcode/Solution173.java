@@ -38,7 +38,7 @@ public class Solution173 {
         return list.size() > 0;
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

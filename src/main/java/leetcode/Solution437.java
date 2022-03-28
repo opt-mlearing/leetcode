@@ -57,7 +57,7 @@ public class Solution437 {
         return count;
     }
 
-    public class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

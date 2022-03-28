@@ -30,7 +30,7 @@ public class Solution86 {
         return fockL.next;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
