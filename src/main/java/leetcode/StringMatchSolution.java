@@ -88,7 +88,7 @@ class StringMatchSolution {
             }
             fail[i] = j;
         }
-        for (int i = 0, j = -1; j < tLen; ++i) {
+        for (int i = 0, j = -1; i < tLen; ++i) {
             while (j != -1 && !tOrder.get(i).equals(sOrder.get(j + 1))) {
                 j = fail[j];
             }
