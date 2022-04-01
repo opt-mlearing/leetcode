@@ -9,6 +9,28 @@ import java.util.Deque;
  */
 public class Solution42 {
 
+    // 双指针.
+    public int trap_double_pointer(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int leftMax = 0;
+        int rightMax = 0;
+        int res = 0;
+        while (left < right) {
+            leftMax = Math.max(leftMax, height[left]);
+            rightMax = Math.max(rightMax, height[right]);
+            if (height[left] < height[right]) {
+                res += leftMax - height[left];
+                left++;
+            } else {
+                res += rightMax - height[right];
+                right--;
+            }
+        }
+        return res;
+    }
+
+    // 单调递减栈.
     public int trap_stack(int[] height) {
         Deque<Integer> deque = new ArrayDeque<Integer>();
         int i = 0;
@@ -29,6 +51,7 @@ public class Solution42 {
         return res;
     }
 
+    // 动态规划.
     public int trap_dp(int[] height) {
         int size = height.length;
         int[] left = new int[size];
