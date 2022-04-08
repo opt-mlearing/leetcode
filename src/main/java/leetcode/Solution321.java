@@ -4,7 +4,7 @@ package leetcode;
  * 拼接最大数
  * https://leetcode-cn.com/problems/create-maximum-number/submissions/
  */
-public class Solution {
+public class Solution321 {
 
     public int[] maxNumber(int[] nums1, int[] nums2, int k) {
         int m = nums1.length, n = nums2.length;
