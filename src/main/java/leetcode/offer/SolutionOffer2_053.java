@@ -13,6 +13,7 @@ public class SolutionOffer2_053 {
         TreeNode res = null;
         while (root != null) {
             if (root.val > p.val) {
+                // 后继节点之一，然后随着循环逐步逼近，找到最下后继节点.
                 res = root;
                 root = root.left;
             } else {
