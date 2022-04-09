@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.typical;
 
 /**
  * 面试题 01.07. 旋转矩阵

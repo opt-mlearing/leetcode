@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.typical;
 
 /**
  * 面试题 01.05. 一次编辑

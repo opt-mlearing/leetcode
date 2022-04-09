@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.typical;
 
 /**
  * 面试题 02.04. 分割链表

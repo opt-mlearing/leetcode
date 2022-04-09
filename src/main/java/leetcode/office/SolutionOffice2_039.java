@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.office;
 
 import java.util.Deque;
 import java.util.LinkedList;

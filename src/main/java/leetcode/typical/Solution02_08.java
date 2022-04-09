@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.typical;
 
 public class Solution02_08 {
 
