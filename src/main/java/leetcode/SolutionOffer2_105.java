@@ -4,7 +4,7 @@ package leetcode;
  * 剑指 Offer II 105. 岛屿的最大面积
  * https://leetcode-cn.com/problems/ZL6zAn/
  */
-public class SolutionOffer_105 {
+public class SolutionOffer2_105 {
 
     private int m;
     private int n;
