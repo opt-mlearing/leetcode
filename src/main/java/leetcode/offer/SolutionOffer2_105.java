@@ -1,4 +1,4 @@
-package leetcode.office;
+package leetcode.offer;
 
 /**
  * 剑指 Offer II 105. 岛屿的最大面积
