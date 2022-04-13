@@ -3,6 +3,8 @@ package leetcode;
 /**
  * 50. Pow(x, n)
  * https://leetcode-cn.com/problems/powx-n/
+ * 蛮不错的题解.
+ * https://leetcode-cn.com/problems/powx-n/solution/java-kuai-su-mi-si-lu-qing-xi-dai-ma-jia-60hk/
  */
 public class Solution50 {
 

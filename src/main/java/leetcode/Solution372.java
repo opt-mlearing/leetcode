@@ -6,6 +6,8 @@ import java.util.LinkedList;
 /**
  * 372. 超级次方
  * https://leetcode-cn.com/problems/super-pow/
+ * 蛮不错的题解
+ * https://leetcode-cn.com/problems/powx-n/solution/java-kuai-su-mi-si-lu-qing-xi-dai-ma-jia-60hk/
  */
 public class Solution372 {
 
