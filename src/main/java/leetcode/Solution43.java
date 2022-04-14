@@ -18,6 +18,8 @@ public class Solution43 {
             int n1 = num1.charAt(i) - '0';
             for (int j = n - 1; j >= 0; --j) {
                 int n2 = num2.charAt(j) - '0';
+                // res[i + j + 1] 是低位
+                // res[i + j] 是高位
                 int sum = (res[i + j + 1] + n1 * n2);
                 res[i + j + 1] = sum % 10;
                 res[i + j] += sum / 10;
