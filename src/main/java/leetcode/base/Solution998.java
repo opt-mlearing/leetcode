@@ -9,7 +9,21 @@ import java.util.List;
  */
 public class Solution998 {
 
+    // 递归方式获取.
     public TreeNode insertIntoMaxTree(TreeNode root, int val) {
+        // 已知val添加在最后.
+        if (root == null || root.val < val) {
+            TreeNode node = new TreeNode(val);
+            node.left = root;
+            return node;
+        }
+        // 已知val添加在[最后]. 找一个比val小的位置，这个位置一定在右子树上.
+        root.right = insertIntoMaxTree(root.right, val);
+        return root;
+    }
+
+    // 按照最大树先获取原始数组再重新构建最大树.
+    public TreeNode insertIntoMaxTree_1(TreeNode root, int val) {
         if (root == null) {
             return new TreeNode(val);
         }
