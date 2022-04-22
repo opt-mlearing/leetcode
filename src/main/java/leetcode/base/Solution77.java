@@ -1,41 +1,38 @@
 package leetcode.base;
 
-import java.util.ArrayDeque;
+
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 组合
+ * 77. 组合
  * https://leetcode-cn.com/problems/combinations/
  */
 public class Solution77 {
 
-    private List<List<Integer>> result;
+    private List<List<Integer>> res;
+    private Deque<Integer> path;
 
+    // 无减枝操作时 18 ms- 25.08%/ 42.4 MB-69.00&
     public List<List<Integer>> combine(int n, int k) {
-        result = new ArrayList<>();
-        int[] nums = new int[n];
-        for (int i = 0; i < n; i++) {
-            nums[i] = i + 1;
-        }
-        dfs(nums, 0, k, new ArrayDeque<Integer>());
-        return result;
+        res = new ArrayList<>();
+        backTracking(n, k, 1, new LinkedList<Integer>());
+        return res;
     }
 
-    /* nums&& index 共同表示选择列表, container 表示路径 */
-    private void dfs(int[] nums, int index, int limit, Deque<Integer> container) {
-        if (index == nums.length && container.size() != limit) {
+    private void backTracking(int n, int k, int startIndex, Deque<Integer> path) {
+        // path的长度是不可以超过k的.
+        if (path.size() == k) {
+            res.add(new ArrayList<>(path));
             return;
         }
-        if (container.size() == limit) {
-            result.add(new ArrayList<Integer>(container));
-            return;
-        }
-        for (int i = index; i < nums.length; ++i) {
-            container.push(nums[i]);
-            dfs(nums, i + 1, limit, container);
-            container.pop();
+        // 加减枝后，1ms- 100.0%/ 42.5MB- 52.77%
+        for (int i = startIndex; i <= n - (k - path.size()) + 1; ++i) {
+            path.offer(i);
+            backTracking(n, k, i + 1, path);
+            path.pollLast();
         }
     }
 
