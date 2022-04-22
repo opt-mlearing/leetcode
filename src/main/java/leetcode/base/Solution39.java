@@ -24,11 +24,11 @@ public class Solution39 {
     }
 
     private void backTracking(int[] candidates, int target, int sum, int startIndex, Deque<Integer> path) {
-        if (sum > target || startIndex == candidates.length) {
-            return;
-        }
         if (sum == target) {
             res.add(new ArrayList<Integer>(path));
+            return;
+        }
+        if (sum > target || startIndex == candidates.length) {
             return;
         }
         // candidates已经做了升序排序，这里做一下减枝.
