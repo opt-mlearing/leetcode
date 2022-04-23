@@ -1,4 +1,4 @@
-package leetcode.offer;
+package leetcode.base;
 
 import java.util.ArrayList;
 import java.util.Deque;
