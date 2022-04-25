@@ -1,11 +1,12 @@
 package leetcode.base;
 
 /**
- * 判断子序列
+ * 392. 判断子序列
  * https://leetcode-cn.com/problems/is-subsequence/
  */
 public class Solution392 {
 
+    // dp[i][j] ：长度为i，末尾项为s[i-1]的子字符串，与长度为j，末尾项为t[j-1]的子字符串，二者的相同子序列长度.
     public boolean isSubsequence(String s, String t) {
         int m = s.length();
         int n = t.length();
