@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 088. 爬楼梯的最少成本
  * https://leetcode-cn.com/problems/GzCJIP/
  */
-public class SolutionOfferII_088 {
+public class SolutionOffer_II_088 {
 
     public int minCostClimbingStairs(int[] cost) {
         int size = cost.length;

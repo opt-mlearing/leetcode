@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * 剑指 Offer II 040. 矩阵中最大的矩形
  * https://leetcode-cn.com/problems/PLYXKQ/
  */
-public class SolutionOffer2_040 {
+public class SolutionOffer_II_040 {
 
     public int maximalRectangle(String[] matrix) {
         if (matrix == null || matrix.length == 0) {

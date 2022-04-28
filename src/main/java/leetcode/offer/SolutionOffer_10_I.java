@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 10- I. 斐波那契数列
  * https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
  */
-public class SolutionOffer10_I {
+public class SolutionOffer_10_I {
 
     public int fib(int n) {
         int size = n + 1 >= 2 ? n + 1 : 2;

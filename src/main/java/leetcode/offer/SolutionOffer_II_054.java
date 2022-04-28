@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 054. 所有大于等于节点的值之和
  * https://leetcode-cn.com/problems/w6cpku/
  */
-public class SolutionOffer2_054 {
+public class SolutionOffer_II_054 {
 
     private int val;
 

@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 024. 反转链表
  * https://leetcode-cn.com/problems/UHnkqh/
  */
-public class SolutionOffer2_024 {
+public class SolutionOffer_II_024 {
 
     public ListNode reverseList(ListNode head) {
         // 迭代

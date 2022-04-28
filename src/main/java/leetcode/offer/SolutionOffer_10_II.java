@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 10- II. 青蛙跳台阶问题
  * https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
  */
-public class SolutionOffer2_10 {
+public class SolutionOffer_10_II {
 
     public int numWays(int n) {
         int[] dp = new int[n + 1 > 3 ? n + 1 : 3];

@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 49. 丑数
  * https://leetcode-cn.com/problems/chou-shu-lcof/
  */
-public class SolutionOffer49 {
+public class SolutionOffer_49 {
 
     // 只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）.
     public int nthUglyNumber(int n) {

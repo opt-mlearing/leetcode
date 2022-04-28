@@ -7,7 +7,7 @@ import java.util.Set;
  * 剑指 Offer II 056. 二叉搜索树中两个节点之和
  * https://leetcode-cn.com/problems/opLdQZ/
  */
-public class SolutionOffer2_056 {
+public class SolutionOffer_II_056 {
 
     private Set<Integer> valueSet = new HashSet<Integer>();
 

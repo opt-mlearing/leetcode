@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 112. 最长递增路径
  * https://leetcode-cn.com/problems/fpTFWP/
  */
-public class SolutionOffer2_112 {
+public class SolutionOffer_II_112 {
 
     private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     private int res = 0;

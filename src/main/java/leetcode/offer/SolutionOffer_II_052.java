@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 052. 展平二叉搜索树
  * https://leetcode-cn.com/problems/NYBBNL/
  */
-public class SolutionOffer2_052 {
+public class SolutionOffer_II_052 {
 
     private TreeNode pre;
     private TreeNode head;

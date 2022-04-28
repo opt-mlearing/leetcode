@@ -9,7 +9,7 @@ import java.util.List;
  * 剑指 Offer II 113. 课程顺序
  * https://leetcode-cn.com/problems/QA2IGt/
  */
-public class SolutionOfferII_113 {
+public class SolutionOffer_II_113 {
 
     // 拓扑排序
     public int[] findOrder(int numCourses, int[][] prerequisites) {

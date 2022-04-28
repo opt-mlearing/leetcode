@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 053. 二叉搜索树中的中序后继
  * https://leetcode-cn.com/problems/P5rCT8/
  */
-public class SolutionOffer2_053 {
+public class SolutionOffer_II_053 {
 
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         if (root == null) {

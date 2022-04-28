@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 27. 二叉树的镜像
  * https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/
  */
-public class SolutionOffer27 {
+public class SolutionOffer_27 {
 
     public TreeNode mirrorTree(TreeNode root) {
         if (root == null) {

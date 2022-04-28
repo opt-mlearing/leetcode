@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 28. 对称的二叉树
  * https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/
  */
-public class SolutionOffer28 {
+public class SolutionOffer_28 {
 
     public boolean isSymmetric(TreeNode root) {
         return dfs(root, root);

@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 55 - I. 二叉树的深度
  * https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/
  */
-public class SolutionOffer55_I {
+public class SolutionOffer_55_I {
 
     public int maxDepth(TreeNode root) {
         if (root == null) {

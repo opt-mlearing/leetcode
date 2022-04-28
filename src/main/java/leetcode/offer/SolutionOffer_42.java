@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer 42. 连续子数组的最大和
  * https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
  */
-public class SolutionOffer42 {
+public class SolutionOffer_42 {
 
     public int maxSubArray_1(int[] nums) {
         // dp[i] 表示以第i结尾子串最大.
