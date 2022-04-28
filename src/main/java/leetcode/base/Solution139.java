@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 单词拆分
+ * 139. 单词拆分
  * https://leetcode-cn.com/problems/word-break/
  */
 public class Solution139 {
@@ -17,6 +17,7 @@ public class Solution139 {
         for (int i = 1; i <= s.length(); ++i) {
             // j表示切点.
             for (int j = 0; j < i; ++j) {
+                // dp[i]|= dp[j]&& set.contains(s.substring(j, i));
                 if (dp[j] && set.contains(s.substring(j, i))) {
                     dp[i] = true;
                 }
