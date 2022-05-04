@@ -8,6 +8,39 @@ import java.util.Arrays;
  */
 public class Solution300 {
 
+    // 加入二分优化.
+    public int lengthOfLIS_1(int[] nums) {
+        int size = nums.length;
+        if (size == 0) {
+            return 0;
+        }
+        int len = 1;
+        int[] d = new int[size + 1];
+        d[len] = nums[0];
+        for (int i = 1; i < size; ++i) {
+            if (nums[i] > d[len]) {
+                len++;
+                d[len] = nums[i];
+            } else {
+                int l = 1;
+                int r = len;
+                int pos = 0;
+                // 如果找不到说明所有的数都比 nums[i] 大，此时要更新 d[1]，所以这里将 pos 设为 0
+                while (l <= r) {
+                    int mid = (l + r) >> 1;
+                    if (d[mid] < nums[i]) {
+                        pos = mid;
+                        l = mid + 1;
+                    } else {
+                        r = mid - 1;
+                    }
+                }
+                d[pos + 1] = nums[i];
+            }
+        }
+        return len;
+    }
+
     // 注意，题目中明确的是序不是子串，子串是连续的.
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
