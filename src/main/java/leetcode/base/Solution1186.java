@@ -56,8 +56,6 @@ public class Solution1186 {
         int[][] dp = new int[size + 1][k + 1];
         // dp[i][0]表示到第i个元素结束未删除元素的最大和
         // dp[i][1]表示到第i个元素结束删除一个元素的最大和.
-        dp[0][0] = 0;
-        dp[0][1] = 0;
         dp[1][0] = arr[0];
         // 因为至少有一个元素，所以出初始化的时候，res= Math.max(dp[1][0], dp[1][1]) 是错误的.
         int res = dp[1][0];
