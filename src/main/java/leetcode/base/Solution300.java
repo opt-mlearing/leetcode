@@ -3,7 +3,7 @@ package leetcode.base;
 import java.util.Arrays;
 
 /**
- * 最长递增子序列
+ * 300. 最长递增子序列
  * https://leetcode-cn.com/problems/longest-increasing-subsequence/
  */
 public class Solution300 {
