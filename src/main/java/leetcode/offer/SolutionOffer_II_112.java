@@ -6,7 +6,7 @@ package leetcode.offer;
  */
 public class SolutionOffer_II_112 {
 
-    private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+    private static final int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     private int res = 0;
     private int[][] lengthMatrix = null;
 

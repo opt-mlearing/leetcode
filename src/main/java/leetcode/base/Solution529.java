@@ -8,7 +8,7 @@ public class Solution529 {
 
     private int m;
     private int n;
-    private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+    private static final int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
 
     public char[][] updateBoard(char[][] board, int[] click) {
         m = board.length;
