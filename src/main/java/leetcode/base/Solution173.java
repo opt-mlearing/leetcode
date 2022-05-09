@@ -1,8 +1,7 @@
 package leetcode.base;
 
-import com.sun.deploy.util.StringUtils;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 二叉搜索树迭代器
