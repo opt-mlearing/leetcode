@@ -44,4 +44,35 @@ public class Solution1563 {
         return res;
     }
 
+    // dp动态规划.
+    public int stoneGameV_dp(int[] stoneValue) {
+        int size = stoneValue.length;
+        int[][] dp = new int[size][size];
+        int[] preSum = new int[size + 1];
+        for (int i = 0; i < size; ++i) {
+            preSum[i + 1] = preSum[i] + stoneValue[i];
+        }
+        for (int len = 1; len <= size; ++len) {
+            for (int i = size - 1; i >= 0; --i) {
+                int j = i + len - 1;
+                if (j >= size) {
+                    continue;
+                }
+                // 枚举切点.
+                for (int k = i; k < j; ++k) {
+                    int left = preSum[k + 1] - preSum[i];
+                    int right = preSum[j + 1] - preSum[k + 1];
+                    if (left < right) {
+                        dp[i][j] = Math.max(dp[i][j], left + dp[i][k]);
+                    } else if (left > right) {
+                        dp[i][j] = Math.max(dp[i][j], right + dp[k + 1][j]);
+                    } else {
+                        dp[i][j] = Math.max(dp[i][j], Math.max(left + dp[i][k], right + dp[k + 1][j]));
+                    }
+                }
+            }
+        }
+        return dp[0][size - 1];
+    }
+
 }
