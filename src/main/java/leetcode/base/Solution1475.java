@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * 商品折扣后的最终价格
+ * 1475. 商品折扣后的最终价格
  * https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop/
  */
 public class Solution1475 {
