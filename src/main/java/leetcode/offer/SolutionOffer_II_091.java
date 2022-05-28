@@ -4,7 +4,7 @@ package leetcode.offer;
  * 剑指 Offer II 091. 粉刷房子
  * https://leetcode-cn.com/problems/JEj789/
  */
-public class Solution_II_091 {
+public class SolutionOffer_II_091 {
 
     // dp需要分状态存储.
     public int minCost(int[][] costs) {

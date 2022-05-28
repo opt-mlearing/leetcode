@@ -7,12 +7,12 @@ import java.util.List;
  * 剑指 Offer II 055. 二叉搜索树迭代器
  * https://leetcode-cn.com/problems/kTOapQ/
  */
-public class BSTIteratorOffer_II_055 {
+public class SolutionOffer_II_055 {
 
     private List<Integer> list = null;
     private int pointer;
 
-    public BSTIteratorOffer_II_055(TreeNode root) {
+    public SolutionOffer_II_055(TreeNode root) {
         list = new ArrayList<Integer>();
         innerOrder(root, list);
         pointer = 0;

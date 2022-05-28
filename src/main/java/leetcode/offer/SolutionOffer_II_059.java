@@ -6,12 +6,12 @@ import java.util.PriorityQueue;
  * 剑指 Offer II 059. 数据流的第 K 大数值
  * https://leetcode-cn.com/problems/jBjn9C/
  */
-public class KthLargestOffer_II_059 {
+public class SolutionOffer_II_059 {
 
     private PriorityQueue<Integer> queue;
     private int size;
 
-    public KthLargestOffer_II_059(int k, int[] nums) {
+    public SolutionOffer_II_059(int k, int[] nums) {
         queue = new PriorityQueue<Integer>();
         size = k;
         for (int num : nums) {
