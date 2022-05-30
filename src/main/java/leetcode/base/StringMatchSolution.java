@@ -64,7 +64,6 @@ class StringMatchSolution {
         }
     }
 
-
     public static void main(String[] args) {
         StringMatchSolution matchSolution = new StringMatchSolution();
         List<Integer> sOrder = Arrays.asList(2, 2, 3, 2, 2, 3);
