@@ -1,25 +1,25 @@
 package leetcode.base;
 
 /**
- * 添加与搜索单词 - 数据结构设计
+ * 211. 添加与搜索单词 - 数据结构设计
  * https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/
  */
-public class WordDictionary {
+public class WordDictionary211 {
 
-    private WordDictionary[] children;
+    private WordDictionary211[] children;
     private boolean isEnd;
 
-    public WordDictionary() {
-        this.children = new WordDictionary[26];
+    public WordDictionary211() {
+        this.children = new WordDictionary211[26];
         this.isEnd = false;
     }
 
     public void addWord(String word) {
-        WordDictionary node = this;
+        WordDictionary211 node = this;
         for (int i = 0; i < word.length(); ++i) {
             int index = word.charAt(i) - 'a';
             if (node.children[index] == null) {
-                node.children[index] = new WordDictionary();
+                node.children[index] = new WordDictionary211();
             }
             node = node.children[index];
         }
@@ -30,7 +30,7 @@ public class WordDictionary {
         return doSearch(word, 0, this);
     }
 
-    private boolean doSearch(String word, int index, WordDictionary node) {
+    private boolean doSearch(String word, int index, WordDictionary211 node) {
         if (index == word.length()) {
             return node.isEnd;
         }
