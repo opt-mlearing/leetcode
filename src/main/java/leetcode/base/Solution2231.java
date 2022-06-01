@@ -11,11 +11,34 @@ import java.util.List;
  */
 public class Solution2231 {
 
+    // 选择排序.
+    public int largestInteger(int num) {
+        String numStr = Integer.toString(num);
+        int[] nums = new int[numStr.length()];
+        for (int i = 0; i < nums.length; ++i) {
+            nums[i] = numStr.charAt(i) - '0';
+        }
+        for (int i = 0; i < nums.length - 1; ++i) {
+            for (int j = i + 1; j < nums.length; ++j) {
+                if ((nums[i] - nums[j]) % 2 == 0 && nums[i] < nums[j]) {
+                    int tmp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = tmp;
+                }
+            }
+        }
+        int res = 0;
+        for (int i = 0; i < nums.length; ++i) {
+            res = res * 10 + nums[i];
+        }
+        return res;
+    }
+
     private Deque<Integer> odd;
     private Deque<Integer> even;
     private Deque<Integer> stack;
 
-    public int largestInteger(int num) {
+    public int largestInteger_stack(int num) {
         odd = new LinkedList<Integer>();
         even = new LinkedList<Integer>();
         stack = new LinkedList<Integer>();
