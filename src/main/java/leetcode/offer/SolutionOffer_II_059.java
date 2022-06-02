@@ -8,21 +8,22 @@ import java.util.PriorityQueue;
  */
 public class SolutionOffer_II_059 {
 
+    // PriorityQueue
     private PriorityQueue<Integer> queue;
     private int size;
 
     public SolutionOffer_II_059(int k, int[] nums) {
-        queue = new PriorityQueue<Integer>();
-        size = k;
+        this.size = k;
+        this.queue = new PriorityQueue<Integer>();
         for (int num : nums) {
-            add(num);
+            this.queue.offer(num);
         }
     }
 
+    // 默认PriorityQueue是小顶堆,queue的顶指向最小, 那么只要维持queue的长度为k，则栈顶正好是第k大.
     public int add(int val) {
-        // 使用优先队列，先增加再删除.
-        queue.add(val);
-        if (queue.size() > size) {
+        this.queue.offer(val);
+        while (this.queue.size() > this.size) {
             queue.poll();
         }
         return queue.peek();
