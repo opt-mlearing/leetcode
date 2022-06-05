@@ -7,11 +7,11 @@ import java.util.LinkedList;
  * 933. 最近的请求次数
  * https://leetcode-cn.com/problems/number-of-recent-calls/
  */
-public class RecentCounter933 {
+public class Solution933 {
 
     private Deque<Integer> deque;
 
-    public RecentCounter933() {
+    public Solution933() {
         deque = new LinkedList<Integer>();
     }
 
