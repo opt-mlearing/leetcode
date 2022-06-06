@@ -7,11 +7,11 @@ import java.util.LinkedList;
  * 剑指 Offer II 042. 最近请求次数
  * https://leetcode.cn/problems/H8086Q/submissions/
  */
-public class RecentCounter {
+public class SolutionOffer_II_042 {
 
     private Deque<Integer> stack;
 
-    public RecentCounter() {
+    public SolutionOffer_II_042() {
         stack = new LinkedList<Integer>();
     }
 
