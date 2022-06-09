@@ -22,7 +22,7 @@ public class Solution188 {
             dp[0][1][i] = -prices[0];
         }
         // 特例，标注下
-        dp[0][1][0]= 0;
+        dp[0][1][0] = 0;
         for (int i = 1; i < size; ++i) {
             for (int j = 1; j <= kk; ++j) {
                 dp[i][0][j] = Math.max(dp[i - 1][0][j], dp[i - 1][1][j] + prices[i]);

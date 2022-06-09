@@ -19,10 +19,10 @@ public class Solution605 {
                     n--;
                     i += 2;
                 } else if (flowerbed[i + 1] == 1) {  // 010 不种花
-                    i+= 3;
+                    i += 3;
                 }
             } else if (flowerbed[i] == 1) {  // 10 不种花
-                i+= 2;
+                i += 2;
             }
         }
         return n <= 0;

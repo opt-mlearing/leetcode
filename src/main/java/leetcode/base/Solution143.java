@@ -9,10 +9,10 @@ public class Solution143 {
         ListNode listNode4 = new ListNode(4);
         ListNode listNode5 = new ListNode(5);
 
-        listNode1.next= listNode2;
-        listNode2.next= listNode3;
-        listNode3.next= listNode4;
-        listNode4.next= listNode5;
+        listNode1.next = listNode2;
+        listNode2.next = listNode3;
+        listNode3.next = listNode4;
+        listNode4.next = listNode5;
         Solution143 solution143 = new Solution143();
         solution143.reorderList(listNode1);
     }
@@ -33,15 +33,15 @@ public class Solution143 {
         ListNode current = dummy;
         // head1要么比head2 长1，要么一样长.
         while (head1 != null && head2 != null) {
-            ListNode next1= head1.next;
-            ListNode next2= head2.next;
-            head1.next= null;
-            head2.next= null;
-            current.next= head1;
-            current.next.next= head2;
-            current= current.next.next;
-            head1= next1;
-            head2= next2;
+            ListNode next1 = head1.next;
+            ListNode next2 = head2.next;
+            head1.next = null;
+            head2.next = null;
+            current.next = head1;
+            current.next.next = head2;
+            current = current.next.next;
+            head1 = next1;
+            head2 = next2;
         }
 
         return dummy.next;

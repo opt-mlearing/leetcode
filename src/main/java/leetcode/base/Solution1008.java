@@ -41,6 +41,7 @@ public class Solution1008 {
         int val;
         TreeNode left;
         TreeNode right;
+
         TreeNode() {
         }
 

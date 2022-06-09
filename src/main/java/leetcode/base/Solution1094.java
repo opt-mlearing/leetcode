@@ -1,7 +1,6 @@
 package leetcode.base;
 
 /**
- *
  * https://leetcode.cn/problems/car-pooling/
  */
 public class Solution1094 {

@@ -43,19 +43,19 @@ public class Solution1140 {
 
     // dp
     public int stoneGameII_dp1(int[] piles) {
-        int size= piles.length;
+        int size = piles.length;
         //dp[i][j] 表示从 piles[i: size- 1]取j个先手最大.
-        int[][] dp= new int[size][size+ 1];
-        int sum= 0;
-        for(int i= size- 1; i>= 0; --i){
-            sum+= piles[i];
+        int[][] dp = new int[size][size + 1];
+        int sum = 0;
+        for (int i = size - 1; i >= 0; --i) {
+            sum += piles[i];
             // 特殊值，当i== 1的时候，m最小取1.
-            for(int m= 1; m<= i|| m== 1; ++m){
-                if(i+ 2* m>= size){
-                    dp[i][m]= sum;
-                }else {
-                    for(int x= 1; x<= 2* m; ++x){
-                        dp[i][m]= Math.max(dp[i][m], sum- dp[i+ x][Math.max(m, x)]);
+            for (int m = 1; m <= i || m == 1; ++m) {
+                if (i + 2 * m >= size) {
+                    dp[i][m] = sum;
+                } else {
+                    for (int x = 1; x <= 2 * m; ++x) {
+                        dp[i][m] = Math.max(dp[i][m], sum - dp[i + x][Math.max(m, x)]);
                     }
                 }
             }
@@ -64,18 +64,18 @@ public class Solution1140 {
     }
 
     public int stoneGameII_dp2(int[] piles) {
-        int size= piles.length;
-        int[][] dp= new int[size][size+ 1];
-        int sum= 0;
-        for(int i= size; i>= 1; --i){
-            sum+= piles[i- 1];
+        int size = piles.length;
+        int[][] dp = new int[size][size + 1];
+        int sum = 0;
+        for (int i = size; i >= 1; --i) {
+            sum += piles[i - 1];
             // i== 0 时 m= 1, 改进下i的最小值.
-            for(int m= 1; m<= i; ++m){
-                if(i- 1+ 2* m>= size){
-                    dp[i- 1][m]= sum;
-                }else{
-                    for(int x= 1; x<= 2* m; ++x){
-                        dp[i- 1][m]= Math.max(dp[i- 1][m], sum- dp[i- 1+ x][Math.max(x, m)]);
+            for (int m = 1; m <= i; ++m) {
+                if (i - 1 + 2 * m >= size) {
+                    dp[i - 1][m] = sum;
+                } else {
+                    for (int x = 1; x <= 2 * m; ++x) {
+                        dp[i - 1][m] = Math.max(dp[i - 1][m], sum - dp[i - 1 + x][Math.max(x, m)]);
                     }
                 }
             }
