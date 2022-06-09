@@ -1,4 +1,4 @@
-package algorithm4;
+package algs4;
 
 /**
  * 并查集

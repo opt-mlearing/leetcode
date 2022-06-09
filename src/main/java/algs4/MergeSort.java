@@ -1,4 +1,4 @@
-package algorithm4;
+package algs4;
 
 /**
  * 归并排序.

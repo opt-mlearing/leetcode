@@ -1,4 +1,4 @@
-package algorithm4.graphs;
+package algs4.graphs;
 
 /******************************************************************************
  *  Compilation:  javac Graph.java
@@ -36,7 +36,12 @@ package algorithm4.graphs;
  *
  ******************************************************************************/
 
+import algs4.Bag;
+import algs4.In;
+import algs4.StdOut;
+
 import java.util.NoSuchElementException;
+import java.util.Stack;
 
 /**
  * The {@code Graph} class represents an undirected graph of vertices
@@ -177,8 +182,7 @@ public class Graph {
 
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
     private void validateVertex(int v) {
-        if (v < 0 || v >= V)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
+        if (v < 0 || v >= V) throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
     }
 
     /**

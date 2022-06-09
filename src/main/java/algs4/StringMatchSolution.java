@@ -1,4 +1,4 @@
-package algorithm4;
+package algs4;
 
 import java.util.Arrays;
 import java.util.List;
