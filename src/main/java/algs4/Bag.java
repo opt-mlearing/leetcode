@@ -89,6 +89,7 @@ public class Bag<Item> implements Iterable<Item> {
     }
 
     /**
+     * 这里的add像压栈的形式，新增节点在当前节点之前.
      * Adds the item to this bag.
      *
      * @param item the item to add to this bag

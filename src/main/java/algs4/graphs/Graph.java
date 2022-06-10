@@ -196,6 +196,7 @@ public class Graph {
         validateVertex(v);
         validateVertex(w);
         E++;
+        // 无向图，同一边的两个顶点互为邻接点.
         adj[v].add(w);
         adj[w].add(v);
     }
