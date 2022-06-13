@@ -69,6 +69,12 @@ public class Solution698 {
         }
         int target = sum / k;
         Arrays.sort(nums);
+        // 做一下降序排列，时间开销会小很多.
+        for (int i = 0, j = size - 1; i < j; i++, j--) {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
         // 根据题目意思，nums中都是正整数.
         if (nums[size - 1] > target) {
             return false;
