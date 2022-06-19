@@ -14,22 +14,22 @@ public class Solution395 {
 
     public int longestSubstring(String s, int k) {
         int res = 0;
-        for (int i = 1; i <= 26; ++i) {
-            Map<Character, Integer> map = new HashMap<Character, Integer>();
+        // 一共26个小写字母.
+        for (int kind = 1; kind <= 26; ++kind) {
             int left = 0;
             int right = 0;
-            int size = s.length();
-            int kind = 0;
-            while (right < size) {
+            int count = 0;
+            Map<Character, Integer> map = new HashMap<Character, Integer>();
+            while (right < s.length()) {
                 char tmp = s.charAt(right);
                 map.put(tmp, map.getOrDefault(tmp, 0) + 1);
                 if (map.getOrDefault(tmp, 0) == k) {
-                    kind++;
+                    count++;
                 }
-                while (map.keySet().size() > i) {
+                while (map.keySet().size() > kind) {
                     char leftChar = s.charAt(left);
                     if (map.getOrDefault(leftChar, 0) == k) {
-                        kind--;
+                        count--;
                     }
                     map.put(leftChar, map.getOrDefault(leftChar, 0) - 1);
                     if (map.getOrDefault(leftChar, 0) == 0) {
@@ -37,8 +37,9 @@ public class Solution395 {
                     }
                     left++;
                 }
-                int curr = map.keySet().size();
-                if (curr == i && kind == i) {
+                int mapSize = map.keySet().size();
+                // map中每一个元素的最小出现频次都不少于k次.
+                if (mapSize == kind && count == kind) {
                     res = Math.max(res, right - left + 1);
                 }
                 right++;
