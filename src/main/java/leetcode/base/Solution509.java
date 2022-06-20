@@ -11,7 +11,26 @@ public class Solution509 {
         if (n <= 1) {
             return n;
         }
-        return fib_recursion(n - 1) + fib_recursion(n - 2);
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    private Integer[] memo;
+
+    // 递归+ 记忆化搜索， 0ms/ 38.7MB.
+    public int fib(int n) {
+        memo = new Integer[n + 1 >= 2 ? n + 1 : 2];
+        memo[0] = 0;
+        memo[1] = 1;
+        return dfs(n);
+    }
+
+    private int dfs(int n) {
+        if (memo[n] != null) {
+            return memo[n];
+        }
+        int value = dfs(n - 1) + dfs(n - 2);
+        memo[n] = value;
+        return value;
     }
 
     // 动态规划，0ms/ 38.3MB
