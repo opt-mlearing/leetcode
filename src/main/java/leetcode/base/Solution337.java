@@ -3,7 +3,38 @@ package leetcode.base;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 337. 打家劫舍 III
+ * https://leetcode.cn/problems/house-robber-iii/
+ *
+ * @author: caogl
+ * @date: 2022/6/22, 1:46
+ **/
 public class Solution337 {
+
+    private Map<TreeNode, Integer> map = new HashMap<TreeNode, Integer>();
+
+    public int rob_recursion(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (map.containsKey(root)) {
+            return map.get(root);
+        }
+        int robRoot = root.val;
+        // 抢root
+        if (root.left != null) {
+            robRoot += rob(root.left.left) + rob(root.left.right);
+        }
+        if (root.right != null) {
+            robRoot += rob(root.right.left) + rob(root.right.right);
+        }
+        int noRobRoot = rob(root.left) + rob(root.right);
+        int value = Math.max(robRoot, noRobRoot);
+        map.put(root, value);
+        return value;
+    }
+
 
     private Map<TreeNode, Integer> select = new HashMap<>();
     private Map<TreeNode, Integer> abandon = new HashMap<>();
@@ -25,8 +56,8 @@ public class Solution337 {
         // 1）当root节点被选中时，root.left && root.right必然不能继续选中；
         // 2）当root节点不被选中时，root.left、root.right 分别可以被选中或者可以不被选中.
         select.put(root, root.val + abandon.getOrDefault(root.left, 0) + abandon.getOrDefault(root.right, 0));
-        abandon.put(root, Math.max(select.getOrDefault(root.left, 0), abandon.getOrDefault(root.left, 0))
-                + Math.max(select.getOrDefault(root.right, 0), abandon.getOrDefault(root.right, 0)));
+        abandon.put(root, Math.max(select.getOrDefault(root.left, 0), abandon.getOrDefault(root.left, 0)) +
+                Math.max(select.getOrDefault(root.right, 0), abandon.getOrDefault(root.right, 0)));
     }
 
     private static class TreeNode {
