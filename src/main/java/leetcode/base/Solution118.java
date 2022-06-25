@@ -4,28 +4,52 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 杨辉三角
+ * 118. 杨辉三角
+ * https://leetcode.cn/problems/pascals-triangle/
  *
- * @link https://leetcode-cn.com/problems/pascals-triangle/
- */
+ * @author: caogl
+ * @date: 2022/6/25, 23:31
+ **/
 public class Solution118 {
 
+    // dp网格.
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> result = new ArrayList<>();
+        int[][] dp = new int[numRows][numRows];
         for (int i = 0; i < numRows; ++i) {
-            List<Integer> tmp = new ArrayList<Integer>();
+            dp[i][0] = 1;
+            dp[i][i] = 1;
+        }
+        List<List<Integer>> res = new ArrayList<>();
+        for (int i = 0; i < numRows; ++i) {
+            List<Integer> sub = new ArrayList<>();
             for (int j = 0; j <= i; ++j) {
-                // 产生第一行时，一定不会进入到else分支.
+                if (j > 0 && j <= i - 1) {
+                    dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 1];
+                }
+                sub.add(dp[i][j]);
+            }
+            res.add(sub);
+        }
+        return res;
+    }
+
+    // 依次遍历.
+    public List<List<Integer>> generate_traverse(int numRows) {
+        List<List<Integer>> res = new ArrayList<>();
+        for (int i = 0; i < numRows; ++i) {
+            List<Integer> subList = new ArrayList<Integer>();
+            for (int j = 0; j <= i; ++j) {
+                // 每行的第一个和最后一个
                 if (j == 0 || j == i) {
-                    tmp.add(1);
+                    subList.add(1);
                 } else {
-                    List<Integer> preRow = result.get(i - 1);
-                    tmp.add(preRow.get(j - 1) + preRow.get(j));
+                    List<Integer> preList = res.get(i - 1);
+                    subList.add(preList.get(j - 1) + preList.get(j));
                 }
             }
-            result.add(tmp);
+            res.add(subList);
         }
-        return result;
+        return res;
     }
 
 }
