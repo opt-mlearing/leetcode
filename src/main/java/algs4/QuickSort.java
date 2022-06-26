@@ -1,7 +1,5 @@
 package algs4;
 
-import java.util.Arrays;
-
 /**
  * quick sort.
  *
