@@ -41,7 +41,6 @@ public class QuickSort {
 
     private int partition1(int[] nums, int left, int right) {
         int pivot = nums[right];
-        int start = left;
         int wall = left;
         for (int i = left; i < right; ++i) {
             if (nums[i] < pivot) {
