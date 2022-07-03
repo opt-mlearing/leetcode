@@ -9,7 +9,7 @@ import java.util.Deque;
  */
 public class Solution994 {
 
-    private int[][] direction = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
+    private static final int[][] direction = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
 
     public int orangesRotting(int[][] grid) {
         int[][] distance = new int[grid.length][grid[0].length];

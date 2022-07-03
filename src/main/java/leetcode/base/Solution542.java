@@ -9,7 +9,7 @@ import java.util.Deque;
  */
 public class Solution542 {
 
-    private int[][] direction = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+    private static final int[][] direction = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
     public int[][] updateMatrix(int[][] mat) {
         int[][] distance = new int[mat.length][mat[0].length];

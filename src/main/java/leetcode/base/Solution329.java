@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class Solution329 {
 
-    private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+    private static final int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     private int[][] maxLenMatrix;
     private int maxLen;
 
