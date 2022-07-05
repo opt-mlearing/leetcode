@@ -5,9 +5,12 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * 丑数 II
+ * 264. 丑数 II
  * https://leetcode-cn.com/problems/ugly-number-ii/
- */
+ *
+ * @author: caogl
+ * @date: 2022/7/6, 0:09
+ **/
 public class Solution264 {
 
     private int[] factors = {2, 3, 5};
@@ -21,6 +24,7 @@ public class Solution264 {
         int num3 = 1;
         int num5 = 1;
         dp[0] = 0;
+        // 实例2, n= 1, 1通常视为丑数.
         dp[1] = 1;
         for (int i = 2; i <= n; ++i) {
             int a = 2 * dp[num2];
