@@ -7,11 +7,11 @@ package leetcode.base;
  * @author: caogl
  * @date: 2022/7/8, 0:45
  **/
-public class Solution304 {
+public class Solution304_II {
 
     private int[][] dp;
 
-    public Solution304(int[][] matrix) {
+    public Solution304_II(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;
         dp = new int[m + 1][n + 1];
@@ -25,5 +25,11 @@ public class Solution304 {
     public int sumRegion(int row1, int col1, int row2, int col2) {
         return dp[row2 + 1][col2 + 1] - dp[row1][col2 + 1] - dp[row2 + 1][col1] + dp[row1][col1];
     }
-    
+
 }
+
+/**
+ * Your NumMatrix object will be instantiated and called as such:
+ * NumMatrix obj = new NumMatrix(matrix);
+ * int param_1 = obj.sumRegion(row1,col1,row2,col2);
+ */
