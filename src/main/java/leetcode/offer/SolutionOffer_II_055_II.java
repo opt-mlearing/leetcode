@@ -1,19 +1,21 @@
 package leetcode.offer;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  * 剑指 Offer II 055. 二叉搜索树迭代器
  * https://leetcode-cn.com/problems/kTOapQ/
- */
-public class SolutionOffer_II_055 {
+ *
+ * @author: caogl
+ * @date: 2022/7/8, 1:01
+ **/
+public class SolutionOffer_II_055_II {
 
     private List<Integer> list = null;
     private int pointer;
 
-    public SolutionOffer_II_055(TreeNode root) {
+    public SolutionOffer_II_055_II(TreeNode root) {
         list = new ArrayList<Integer>();
         innerOrder(root, list);
         pointer = 0;
@@ -37,55 +39,6 @@ public class SolutionOffer_II_055 {
         innerOrder(node.left, list);
         list.add(node.val);
         innerOrder(node.right, list);
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
-}
-
-class SolutionOffer_II_055_I {
-
-    private List<TreeNode> list;
-    private Iterator<TreeNode> iterator;
-
-    public SolutionOffer_II_055_I(TreeNode root) {
-        list = new ArrayList<TreeNode>();
-        innerOrder(root);
-        iterator = list.iterator();
-    }
-
-    private void innerOrder(TreeNode node) {
-        if (node == null) {
-            return;
-        }
-        innerOrder(node.left);
-        list.add(node);
-        innerOrder(node.right);
-    }
-
-    public int next() {
-        return iterator.next().val;
-    }
-
-    public boolean hasNext() {
-        return iterator.hasNext();
     }
 
     private static class TreeNode {
