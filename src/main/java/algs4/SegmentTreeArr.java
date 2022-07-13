@@ -1,7 +1,7 @@
 package algs4;
 
 /**
- * 线段树，数组形式.
+ * 区间和,线段树,数组形式.
  *
  * @author caogaoli
  * @date 2022/7/13 11:22
