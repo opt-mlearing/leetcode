@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 翻转二叉树以匹配先序遍历
- * https://leetcode-cn.com/problems/flip-binary-tree-to-match-preorder-traversal/
- */
+ * 971. 翻转二叉树以匹配先序遍历
+ * https://leetcode.cn/problems/flip-binary-tree-to-match-preorder-traversal/
+ *
+ * @author: caogl
+ * @date: 2022/7/13, 22:36
+ **/
 public class Solution971 {
 
     private List<Integer> flipped;
