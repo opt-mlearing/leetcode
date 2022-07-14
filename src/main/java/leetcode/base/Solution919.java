@@ -58,15 +58,20 @@ public class Solution919 {
     }
 
     private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+        private int val;
+        private TreeNode left;
+        private TreeNode right;
 
         TreeNode() {
+            this.val = 0;
+            this.left = null;
+            this.right = null;
         }
 
         TreeNode(int val) {
             this.val = val;
+            this.left = null;
+            this.right = null;
         }
 
         TreeNode(int val, TreeNode left, TreeNode right) {
