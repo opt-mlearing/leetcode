@@ -7,12 +7,17 @@
     <groupId>org.example</groupId>
     <artifactId>leetCode</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!--打成jar包-->
+    <packaging>jar</packaging>
+    <!--生成文档的时候使用-->
+    <name>leetcode</name>
+    <description>my leetcode practice record</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <skip.tests>false</skip.tests>
+        <skip.tests>true</skip.tests>
     </properties>
 
     <build>
@@ -52,6 +57,23 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <!-- configure the plugin here -->
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
