@@ -10,6 +10,7 @@ package leetcode.offer;
 public class SolutionOffer_26 {
 
     public boolean isSubStructure(TreeNode A, TreeNode B) {
+        // 题目中已经明确约定空树不是任意一个树的子结构.
         if (A == null || B == null) {
             return false;
         }
