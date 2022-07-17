@@ -7,9 +7,9 @@ import java.util.LinkedList;
  * 1905. 统计子岛屿
  * https://leetcode.cn/problems/count-sub-islands/
  *
- * @author caogaoli
- * @date 2022/7/15 14:33
- */
+ * @author: caogl
+ * @date: 2022/7/17, 16:04
+ **/
 public class Solution1905 {
 
     private static final int[][] direction = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
